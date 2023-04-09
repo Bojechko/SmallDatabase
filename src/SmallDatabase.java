@@ -10,9 +10,9 @@ public class SmallDatabase {
                                                        // время get ArrayList всегда O(1)
 
     public SmallDatabase() {
-        database = new LinkedHashMap<>();       // был выбран LinkedHashMap, т.к. время поиска элемента
-        valueMap = new LinkedHashMap<>();       // в худшем случае будет O(log(n))
-        nameMap = new LinkedHashMap<>();        // в среднем O(1)
+        database = new HashMap<>();       // был выбран HashMap, т.к. время поиска элемента
+        valueMap = new HashMap<>();       // в худшем случае будет O(log(n))
+        nameMap = new HashMap<>();        // в среднем O(1)
     }
 
     public void setRecord(Record record){
@@ -31,7 +31,6 @@ public class SmallDatabase {
         } else {
             System.out.println(record.getAccount() + " уже есть !");
         }
-
     }
 
 
